@@ -1,0 +1,72 @@
+// themes - our custom or/and out of the box themes
+@import 'themes';
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+@import '~@nebular/bootstrap/styles/globals';
+// ...
+
+// global app font size
+@import './font-size';
+
+// loading progress bar theme
+@import './pace.theme';
+
+@import './bootstrap-rtl';
+
+tr td.ng2-smart-actions,
+ng2-st-tbody-custom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+}
+
+.ng2-smart-action-delete-delete,
+.ng2-smart-action-edit-edit,
+.ng2-smart-action-custom-custom {
+    padding-top: 0.8em;
+}
+
+.ng2-smart-action.ng2-smart-action-custom-custom:hover {
+    color: #1e6bb8;
+}
+
+.ng2-smart-action-add-add {
+  display: none;
+}
+
+.table-action-text {
+  font-size: 15px;
+  padding: 2px 15px;
+  color: #777777;
+    text-decoration: underline;
+  margin: 0px 10px;
+}
+
+ng2-smart-table .ng2-smart-actions a.ng2-smart-action {
+  width: auto !important;
+}
+
+.inline {
+  display: inline-block;
+}
+
+// install the framework and custom global styles
+@include nb-install() {
+
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+  @include nb-bootstrap-global();
+
+  // loading progress bar
+  @include ngx-pace-theme();
+
+  // fixed in rc.9 and can be removed after upgrade
+  .custom-control .custom-control-indicator {
+    border-radius: 50%; // TODO: quickfix for https://github.com/akveo/nebular/issues/275
+  }
+  @include bootstrap-rtl();
+};
