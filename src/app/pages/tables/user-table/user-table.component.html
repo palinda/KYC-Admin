@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-header>
+    View Users
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings"  id="kyc-table"
+    (editConfirm)="onSaveConfirm($event)" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

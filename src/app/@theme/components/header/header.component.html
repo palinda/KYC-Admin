@@ -3,12 +3,14 @@
      [class.right]="position === 'inverse'">
   <div class="logo-containter">
     <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
-    <div class="logo" (click)="goToHome()">KYC <span>Admin</span></div>
+    <img src="assets/images/logo.png" style="height: 40px;"/>
+    <div class="logo" (click)="goToHome()">KYC <span>Admin</span>
+    </div>
   </div>
 </div>
 
 <div class="header-container">
-  <nb-actions>
-    <nb-action icon="nb-gear" class="toggle-layout" (click)="toggleSettings()"></nb-action>
-  </nb-actions>
+  <nb-action>
+    <nb-user [nbContextMenu]="userMenu" [name]="user?.u"></nb-user>
+  </nb-action>
 </div>

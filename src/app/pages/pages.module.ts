@@ -5,6 +5,8 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ExtraComponentsModule } from './extra-components/extra-components.module';
+import { NbAlertModule } from '@nebular/theme';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -14,7 +16,9 @@ const PAGES_COMPONENTS = [
   imports: [
     PagesRoutingModule,
     ThemeModule,
+    ExtraComponentsModule,
     DashboardModule,
+    NbAlertModule,
     MiscellaneousModule,
   ],
   declarations: [

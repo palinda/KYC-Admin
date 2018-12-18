@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { ImageViewerModule } from 'ngx-image-viewer';
 import { ThemeModule } from '../../@theme/theme.module';
 import { ButtonsModule } from './buttons/buttons.module';
 import { UiFeaturesRoutingModule } from './ui-features-routing.module';
@@ -16,6 +17,7 @@ import {
   NgxPopoverCardComponent, NgxPopoverFormComponent,
   NgxPopoverTabsComponent,
 } from './popovers/popover-examples.component';
+import { ModalVersionComponent } from './modals/modal/modal-version.component';
 
 const components = [
   UiFeaturesComponent,
@@ -23,6 +25,7 @@ const components = [
   ModalsComponent,
   IconsComponent,
   ModalComponent,
+  ModalVersionComponent,
   TypographyComponent,
   TabsComponent,
   Tab1Component,
@@ -39,12 +42,14 @@ const components = [
     ThemeModule,
     UiFeaturesRoutingModule,
     ButtonsModule,
+    ImageViewerModule.forRoot()
   ],
   declarations: [
     ...components,
   ],
   entryComponents: [
     ModalComponent,
+    ModalVersionComponent,
     NgxPopoverCardComponent,
     NgxPopoverFormComponent,
     NgxPopoverTabsComponent,

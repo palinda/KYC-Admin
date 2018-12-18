@@ -32,12 +32,28 @@ export const NB_CORE_PROVIDERS = [
         baseEndpoint: '',
          login: {
             method: 'post',
-            endpoint: '/login',
+            endpoint: '/auth/login',
             redirect: {
               success: '/pages',
               failure: null,
-            }
-         }
+            },
+         },
+         logout: {
+          method: 'post',
+          endpoint: '/auth/logout',
+          redirect: {
+            success: '/auth/login',
+            failure: '/auth/login',
+          },
+        },
+        resetPass: {
+          method: 'post',
+          endpoint: '/monitoring/reset-password',
+          redirect: {
+            success: '/auth/login',
+            failure: '/auth/login',
+          },
+        },
       }),
     ],
     forms: {

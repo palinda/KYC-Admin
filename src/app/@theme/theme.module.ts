@@ -18,6 +18,11 @@ import {
   NbPopoverModule,
   NbContextMenuModule,
   NbProgressBarModule,
+  NbAlertModule,
+  NbButtonModule,
+  NbSpinnerModule,
+  NbCalendarModule,
+  NbAccordionModule,
 } from '@nebular/theme';
 
 import { NbSecurityModule } from '@nebular/security';
@@ -66,8 +71,13 @@ const NB_MODULES = [
   NbPopoverModule,
   NbContextMenuModule,
   NgbModule,
+  NbAlertModule,
+  NbButtonModule,
+  NbSpinnerModule,
   NbSecurityModule, // *nbIsGranted directive,
   NbProgressBarModule,
+  NbCalendarModule,
+  NbAccordionModule,
 ];
 
 const COMPONENTS = [
@@ -101,7 +111,7 @@ const PIPES = [
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'default',
+      name: 'corporate',
     },
     [ DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME ],
   ).providers,

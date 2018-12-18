@@ -40,8 +40,7 @@ ng2-st-tbody-custom {
 .table-action-text {
   font-size: 15px;
   padding: 2px 15px;
-  color: #777777;
-    text-decoration: underline;
+  color: #00004c;
   margin: 0px 10px;
 }
 
@@ -51,6 +50,42 @@ ng2-smart-table .ng2-smart-actions a.ng2-smart-action {
 
 .inline {
   display: inline-block;
+}
+
+.tablet-btn {
+  border-radius: 8px;
+  padding: 5px 12px;
+  color: #8a7fff;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.active-table-btn {
+  background-color: #8a7fff;
+  color: white;
+}
+
+.loading {
+  background: transparent url('http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif') center no-repeat;
+}
+
+.spinner-container .spinner {
+  top: 45% !important;
+  left: 45%  !important;
+  width: 50px  !important;
+  height: 50px  !important;
+  background: transparent  !important;
+}
+
+#kyc-table  .ng2-smart-actions a.ng2-smart-action {
+  font-size: 1rem !important;
+  padding: 15px !important; 
+  color: #00004c !important;
+  width: 70px !important;
+}
+
+#kyc-table select {
+  height: 31px !important;
 }
 
 // install the framework and custom global styles

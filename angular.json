@@ -12,7 +12,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "preserveSymlinks": true,
-            "outputPath": "D:/ust/KYC/Server/templates",
+            "outputPath": "/Users/macpro/UST/KYC/kyc_server/templates",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
@@ -120,6 +120,7 @@
             ],
             "assets": [
               "src/assets",
+              "src/assets/images",
               "src/favicon.ico",
               "src/favicon.png",
               {

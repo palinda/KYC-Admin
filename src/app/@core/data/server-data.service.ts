@@ -49,4 +49,10 @@ export class CustomServerDataSource extends LocalDataSource {
         })
       ).toPromise();
   }
+
+  update(element: any, values: any): Promise<any> {
+    this.remove(element);
+    return this.add(element);
+  }
+
 }
